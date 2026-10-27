@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff7f2">
+  <title>A Little Love Quiz 💌</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="mini-brand" href="#top" aria-label="A Little Love Quiz home"><span class="brand-heart">♥</span> little love notes</a>
+    <span class="topbar-note">a tiny game for someone special <span>♡</span></span>
+  </header>
+
+  <main class="app" id="top">
+    <section class="screen intro-screen active" id="introScreen" aria-labelledby="introTitle">
+      <div class="intro-layout">
+        <div class="intro-copy">
+          <div class="pill"><span class="sparkle">✦</span> AN EXTREMELY IMPORTANT TEST</div>
+          <h1 id="introTitle">How much do<br>you <em>love me?</em></h1>
+          <p class="intro-text">Ten tiny questions. Two buttons. One very suspicious little “No” button. Choose wisely, cutie.</p>
+          <button class="primary-btn" id="startBtn" type="button">Okay, let's play <span>↗</span></button>
+          <div class="intro-foot"><span class="tiny-heart">♥</span> Made with a little courage and a lot of love</div>
+          <div class="memory-pics" aria-label="Little romantic photo moments">
+            <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=220&q=80" alt="Soft pink flowers" loading="lazy" onerror="this.style.display='none'">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=220&q=80" alt="A cozy coffee moment" loading="lazy" onerror="this.style.display='none'">
+            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=220&q=80" alt="A sweet couple moment" loading="lazy" onerror="this.style.display='none'">
+            <span class="memory-caption">little moments, big feelings ♡</span>
+          </div>
+        </div>
+        <div class="intro-art" aria-label="Animated pink hearts and a love note">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="polaroid">
+            <div class="polaroid-photo"><img src="assets/heart-bounce.gif" alt="Animated pink hearts floating" class="heart-gif"></div>
+            <p>you + me</p>
+            <span class="polaroid-star">✦</span>
+          </div>
+          <div class="floating-tag tag-one">psst... ♡</div>
+          <div class="floating-tag tag-two">pick YES! ✿</div>
+          <span class="art-spark spark-a">✧</span><span class="art-spark spark-b">✦</span>
+          <span class="tiny-doodle doodle-a">♡</span><span class="tiny-doodle doodle-b">♥</span>
+        </div>
+      </div>
+      <div class="intro-bottom"><span>10 QUESTIONS</span><span class="bottom-line"></span><span>NO PRESSURE... JUST KIDDING</span></div>
+    </section>
+
+    <section class="screen quiz-screen" id="quizScreen" aria-labelledby="questionTitle" hidden>
+      <div class="quiz-topline">
+        <a class="back-brand" href="#top" id="quizBrand"><span>♥</span> little love notes</a>
+        <div class="progress-label"><span id="progressText">QUESTION 01 / 10</span><span id="progressPercent">10%</span></div>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+
+      <div class="quiz-card" id="quizCard">
+        <div class="question-art" id="questionArt">
+          <div class="art-wash"></div>
+          <div class="art-orbit"></div>
+          <div class="art-emoji" id="artEmoji" aria-hidden="true">💌</div>
+          <img class="scene-gif" id="sceneGif" src="assets/heart-bounce.gif" alt="A little animated heart" />
+          <span class="art-caption" id="artCaption">a tiny question for you</span>
+          <span class="art-sticker" id="artSticker">BE HONEST ♡</span>
+        </div>
+        <div class="question-copy">
+          <div class="question-kicker"><span>✿</span> QUESTION <span id="questionNumber">01</span></div>
+          <h2 id="questionTitle">Do you love me?</h2>
+          <p id="questionSubtitle">This is your chance to be cute and correct.</p>
+          <div class="answer-stage" id="answerStage">
+            <button class="answer-btn yes-btn" id="yesBtn" type="button">Yes, obviously <span>♡</span></button>
+            <button class="answer-btn no-btn" id="noBtn" type="button" aria-label="No button that keeps moving">No 😶</button>
+          </div>
+          <p class="tiny-hint" id="tinyHint">Psst... the pink button is the correct answer. Just saying.</p>
+        </div>
+      </div>
+      <div class="quiz-footer"><span>ANSWER WITH YOUR HEART</span><span>♡</span><span>NO BUTTON IS A LITTLE SHY</span></div>
+    </section>
+
+    <section class="screen result-screen" id="resultScreen" aria-labelledby="resultTitle" hidden>
+      <div class="result-card">
+        <div class="result-confetti" aria-hidden="true">✦　♡　✧　♥　✿</div>
+        <img src="assets/heart-party.gif" class="result-gif" alt="Animated celebration hearts">
+        <div class="pill result-pill">OFFICIAL LOVE CERTIFICATE</div>
+        <h1 id="resultTitle">Awww, I <em>knew it!</em></h1>
+        <p class="result-lede">You passed the very serious, scientifically questionable love test.</p>
+        <div class="certificate">
+          <span class="certificate-label">THIS CERTIFIES THAT</span>
+          <strong>YOU HAVE A BIG, CUTE HEART</strong>
+          <span class="certificate-copy">and have earned unlimited hugs, extra cuddles, and a date with me. ♡</span>
+          <div class="certificate-seal">LOVE<br><span>♥</span></div>
+        </div>
+        <p class="result-note">Final question: will you go on a date with me? <span>♡</span></p>
+        <div class="result-actions">
+          <button class="primary-btn" id="copyBtn" type="button">Copy my result <span>↗</span></button>
+          <button class="secondary-btn" id="restartBtn" type="button">Play again ↻</button>
+        </div>
+        <p class="copy-status" id="copyStatus" aria-live="polite"></p>
+      </div>
+      <p class="result-footer">made for you, with all my heart <span>♥</span></p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>just a tiny corner of the internet</span><span>♡</span><span>made with love</span></footer>
+</body>
+</html>
